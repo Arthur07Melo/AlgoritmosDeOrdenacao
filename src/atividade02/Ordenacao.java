@@ -12,12 +12,39 @@ public class Ordenacao{
 		return true;
     }
 	
-	public long bubbleSort(int[] numeros){
-        return 1;
+    public long bubbleSort(int[] numeros) {
+        int n = numeros.length;
+        long startTime = System.nanoTime();
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    swap(numeros, j, j + 1);
+                }
+            }
+        }
+        
+        long endTime = System.nanoTime();
+        long executionTime = endTime - startTime;
+        return executionTime;
     }
-	
-	public long selectionSort(int[] numeros){
-        return 1;
+
+    public long selectionSort(int[] numeros) {
+        int n = numeros.length;
+        long startTime = System.nanoTime();
+
+        for (int i = 0; i < n - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < n; j++) {
+                if (numeros[j] < numeros[min]) {
+                    min = j;
+                }
+            }
+            swap(numeros, i, min);
+        }
+        long endTime = System.nanoTime();
+        long executionTime = endTime - startTime;
+        return executionTime;
     }
 	
 	public long insertionSort(int[] numeros){

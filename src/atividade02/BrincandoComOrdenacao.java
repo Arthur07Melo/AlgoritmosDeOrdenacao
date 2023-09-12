@@ -1,7 +1,7 @@
 package atividade02;
 import java.util.Random;
 
-public class App {
+public class BrincandoComOrdenacao {
     public static void main(String[] args) throws Exception {
         calcular_media(15000, 50);
     }
@@ -34,6 +34,7 @@ public class App {
         }
         
         System.out.printf("""
+            \n\nVetor em Ordem Crescente:
                 bubbleSort time:      %d
                 insertionSort time:   %d
                 selectionSort time:   %d
