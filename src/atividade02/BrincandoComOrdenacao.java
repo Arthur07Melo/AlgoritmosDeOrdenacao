@@ -3,11 +3,14 @@ import java.util.Random;
 
 public class BrincandoComOrdenacao {
     public static void main(String[] args) throws Exception {
+        calcular_media(5000, 50);
+        calcular_media(10000, 50);
         calcular_media(15000, 50);
     }
 
 
     public static void calcular_media(int tamVetor, int iter){
+        System.out.printf("================ TESTES COM VETOR TAMANHO %d ================", tamVetor);
         Ordenacao orden = new Ordenacao();
         int arrayCrescente[] = cria_arrayAleatorio(tamVetor);
         int arrayDecrescente[] = cria_arrayDecrescente(tamVetor);
