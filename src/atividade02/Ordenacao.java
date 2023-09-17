@@ -63,25 +63,20 @@ public class Ordenacao{
     }
 	
 	public long mergeSort(int[] numeros){
-        long antes= System.nanoTime();
+        long antes = System.nanoTime();
 		long depois;
 		
 		int n = numeros.length;
-		
-		if(n<=1) {
-			depois = System.nanoTime();
-			return depois-antes;
-		}
-		
-		else {
-			auxMerge(numeros, 0, n-1);
-		}
-			depois = System.nanoTime();
-			return depois-antes;
+		auxMerge(numeros, 0, n-1);
+		depois = System.nanoTime();
+		return depois-antes;
     }
 
     private static void auxMerge(int[] numeros, int ini, int fim) {
-		if(ini<fim) {
+		if(fim<=ini){
+            return;
+        }
+        else {
 			int meio = (ini+fim)/2;
 			int[] resultante = new int[numeros.length];
 			
